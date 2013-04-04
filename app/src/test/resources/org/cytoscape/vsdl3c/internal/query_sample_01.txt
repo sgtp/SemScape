@@ -1,0 +1,35 @@
+PREFIX pao: <http://www.scai.fraunhofer.de/prominer/vocabular/pao#>
+PREFIX scai: <http://www.scai.fraunhofer.de/>
+PREFIX pubmed: <http://www.ncbi.nlm.nih.gov/pubmed/>
+PREFIX nif: <http://nlp2rdf.lod2.eu/schema/string/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dc-term: <http://purl.org/dc/terms/>
+PREFIX sos: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/1999/02/22-rdf-syntax-ns#/>
+PREFIX sample: <http://www.sample.com/sample#>
+
+CONSTRUCT 
+{
+<http://www.scai.fraunhofer.de/DBA000289_7_50_58> a pao:Hit;
+     rdfs:label 'morphine'@en;  
+     nif:subString ?document;
+     nif:subString <http://www.scai.fraunhofer.de/7_1>;
+     nif:beginIndex 50;
+     nif:endIndex 58;
+     skos:definition 'UTF-8_corpus'@en;
+     sample:double 1.1;
+     sample:byte '2'^^<http://www.w3.org/2001/XMLSchema#byte>;
+     sample:short '4'^^<http://www.w3.org/2001/XMLSchema#short>;
+     sample:int '13'^^<http://www.w3.org/2001/XMLSchema#int>;
+     sample:float '9.2'^^<http://www.w3.org/2001/XMLSchema#float>;
+     sample:boolean 'true'^^<http://www.w3.org/2001/XMLSchema#boolean> .
+?document a nif:Document;
+          dc-term:title 'Maturation of the adrenal medulla--IV.'@en;
+          dc-term:indentifier '7'@en;
+          dc-term:abstract 'Effects of morphine.'@en .
+}
+WHERE
+{
+<http://www.scai.fraunhofer.de/DBA000289_7_50_58> nif:subString ?document.
+?document a nif:Document.
+}

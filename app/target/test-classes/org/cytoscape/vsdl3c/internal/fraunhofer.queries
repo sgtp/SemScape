@@ -1,0 +1,101 @@
+query_sample_01 =\
+PREFIX pao: <http://www.scai.fraunhofer.de/prominer/vocabular/pao#>\n\
+PREFIX scai: <http://www.scai.fraunhofer.de/>\n\
+PREFIX pubmed: <http://www.ncbi.nlm.nih.gov/pubmed/>\n\
+PREFIX nif: <http://nlp2rdf.lod2.eu/schema/string/>\n\
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\
+PREFIX dc-term: <http://purl.org/dc/terms/>\n\
+PREFIX sos: <http://purl.org/dc/terms/>\n\
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n\
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+CONSTRUCT\n\
+{\n\
+<http://www.scai.fraunhofer.de/DBA000289_7_50_58> a pao:Hit;\n\
+     rdfs:label 'morphine'@en;\n\
+     rdfs:label 'morphium'@de;\n\
+     nif:subString ?document;\n\
+     nif:subString <http://www.scai.fraunhofer.de/7_1>;\n\
+     nif:beginIndex 50;\n\
+     nif:endIndex 58;\n\
+     skos:definition 'UTF-8_corpus'@en.\n\
+?document a nif:Document;\n\
+     dc-term:title 'Maturation of the adrenal medulla--IV.'@en;\n\
+     dc-term:indentifier '7'@en;\n\
+     dc-term:abstract 'Effects of morphine.'@en .\n\
+}\n\
+WHERE\n\
+{\n\
+<http://www.scai.fraunhofer.de/DBA000289_7_50_58> nif:subString ?document.\n\
+?document a nif:Document.\n\
+}
+
+query_sample_02 = sparql query sample 02
+
+?node_pao\:Hit_01 =\
+PREFIX pao: <http://www.scai.fraunhofer.de/prominer/vocabular/pao#>\n\
+PREFIX scai: <http://www.scai.fraunhofer.de/>\n\
+PREFIX pubmed: <http://www.ncbi.nlm.nih.gov/pubmed/>\n\
+PREFIX nif: <http://nlp2rdf.lod2.eu/schema/string/>\n\
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\
+PREFIX dc-term: <http://purl.org/dc/terms/>\n\
+PREFIX sos: <http://purl.org/dc/terms/>\n\
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n\
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+PREFIX sample: <http://www.sample.com/sample#>\n\
+CONSTRUCT\n\
+{\n\
+<!!!node_uri!!!> a pao:Hit;\n\
+     rdfs:label 'morphine'@en;\n\
+     nif:subString <http://www.ncbi.nlm.nih.gov/pubmed/8>;\n\
+     nif:beginIndex 50;\n\
+     nif:endIndex 58;\n\
+     skos:definition 'UTF-8_corpus'@en;\n\
+     sample:double 1.1;\n\
+     sample:byte '2'^^<http://www.w3.org/2001/XMLSchema#byte>;\n\
+     sample:short '4'^^<http://www.w3.org/2001/XMLSchema#short>;\n\
+     sample:int '13'^^<http://www.w3.org/2001/XMLSchema#int>;\n\
+     sample:float '9.2'^^<http://www.w3.org/2001/XMLSchema#float>;\n\
+     sample:boolean 'true'^^<http://www.w3.org/2001/XMLSchema#boolean> .\n\
+<http://www.ncbi.nlm.nih.gov/pubmed/8> a nif:Document;\n\
+     dc-term:title 'Maturation of the adrenal medulla--IV.'@en;\n\
+     dc-term:indentifier '8'@en;\n\
+     dc-term:abstract 'Effects of morphine.'@en .\n\
+}\n\
+WHERE\n\
+{\n\
+<!!!node_uri!!!> nif:subString ?document.\n\
+?document a nif:Document.\n\
+}
+
+
+?node_as_subject =\
+CONSTRUCT\n\
+{\n\
+<!!!node_uri!!!> ?p ?o.\n\
+}\n\
+WHERE\n\
+{\n\
+<!!!node_uri!!!> ?p ?o.\n\
+}
+
+
+?node_as_object =\
+CONSTRUCT\n\
+{\n\
+?s ?p <!!!node_uri!!!>.\n\
+}\n\
+WHERE\n\
+{\n\
+?s ?p <!!!node_uri!!!>.\n\
+}
+
+?node_rdfs_label =\
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+CONSTRUCT\n\
+{\n\
+<!!!node_uri!!!> rdfs:label ?o .\n\
+}\n\
+WHERE\n\
+{\n\
+<!!!node_uri!!!> rdfs:label ?o .\n\
+}

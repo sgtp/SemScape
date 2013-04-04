@@ -1,0 +1,3 @@
+fraunhofer = http://ops-virtuoso.scai.fraunhofer.de:8891/sparql
+unimaas = http://semantics.bigcat.unimaas.nl:8000/sparql
+test = http://www.test.org/sparql
