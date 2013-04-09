@@ -147,7 +147,7 @@
 		<repository>
 			<id>jena_vsdl3c</id>
 			<name>Jena Bundle Repository</name>
-			<url>https://vsdlc3.googlecode.com/svn/trunk/vsdl3c-repository</url>
+			<url>http://vsdlc3.googlecode.com/svn/trunk/vsdl3c-repository/org/cytoscape/com.hp.hpl.jena/2.9.0-incubating/</url>
 		</repository>
 		<repository>
 			<id>cytoscape_snapshots</id>
