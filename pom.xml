@@ -89,6 +89,12 @@
 			<artifactId>io-impl</artifactId>
 			<version>${cytoscape.impl.version}</version>
 		</dependency>
+		<dependency>
+  			<groupId>org.cytoscape</groupId>
+  			<artifactId>event-api</artifactId>
+  			<version>3.0.0</version>
+  			<classifier>tests</classifier>
+		</dependency>
 	
 		
 		<dependency>
