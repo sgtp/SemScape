@@ -10,7 +10,7 @@
 	<groupId>org.cytoscape</groupId>
 	<artifactId>vsdl3c-feature</artifactId>
 	<packaging>jar</packaging>
-	<name>Visualizing Semantic Data Landscapes with Cytoscape 3.0 Feature (${artifactId})</name>
+	<name>Visualizing Semantic Data Landscapes Feature (${project.artifactId})</name>
 	
 	<build>
 	  <plugins>
