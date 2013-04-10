@@ -3,17 +3,19 @@
     <parent>
 		<artifactId>vsdl3c-parent</artifactId>
         <groupId>org.cytoscape</groupId>
-        <version>1.0.4</version>
+        <version>1.0.5</version>
     </parent>
     <properties>
-		<cytoscape.api.version>3.0.0-beta2-SNAPSHOT</cytoscape.api.version>
-		<osgi.api.version>4.2.0</osgi.api.version>
-	</properties>
+		<!-- cytoscape.api.version>3.0.0-beta2-SNAPSHOT</cytoscape.api.version -->
+		<!--  osgi.api.version>4.2.0</osgi.api.version -->
+		<!--  cytoscape.api.version>3.0.0-beta3-SNAPSHOT</cytoscape.api.version -->
+		<!--  cytoscape.impl.version>3.0.0-alpha10-SNAPSHOT</cytoscape.impl.version -->
+    </properties>
     
 	<groupId>org.cytoscape</groupId>
 	<artifactId>vsdl3c-app</artifactId>
 	<packaging>bundle</packaging>
-	<name>Visualizing Semantic Data Landscapes app (${project.artifactId}) </name> 
+	<name>Visualizing Semantic Data Landscapes with Cytoscape 3.0 App (${artifactId})</name>
 	<build>
 		<plugins>
 			<plugin>
@@ -37,72 +39,34 @@
 			</plugin>
 			
 			<plugin>
-        	<groupId>org.apache.maven.plugins</groupId>
-        	<artifactId>maven-shade-plugin</artifactId>
-        	<version>2.0</version>
-        	
-        	<executions>
-         		<execution>
-            		<phase>package</phase>
-            		<goals>
-              			<goal>shade</goal>
-            		</goals>
-            		<configuration>
-            		 <filters>
-        				<filter>
-            				<artifact>*:*</artifact>
-            					<excludes>
-                					<exclude>META-INF/*.SF</exclude>
-                					<exclude>META-INF/*.DSA</exclude>
-                					<exclude>META-INF/*.RSA</exclude>
-            					</excludes>
-        				</filter>
-    				</filters>
-          				<!-- put your configurations here -->
-          				<finalName>semScape</finalName>
-          				<!--  transformers>
-          					<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                 		 	
-                 		 	<mainClass>net.metarelate.terminology.commandline.ts</mainClass>
-                 		 	
-                 		 	</transformer>
-                 		 </transformers -->
-                	
-        	</configuration>
-          		</execution>
-        	</executions>
-      </plugin>	 
+        		<groupId>org.apache.maven.plugins</groupId>
+        		<artifactId>maven-shade-plugin</artifactId>
+        		<version>2.0</version>
+        		<executions>
+         			<execution>
+            			<phase>package</phase>
+            			<goals>
+              				<goal>shade</goal>
+            			</goals>
+            			<configuration>
+            				<filters>
+        						<filter>
+            						<artifact>*:*</artifact>
+            							<excludes>
+                							<exclude>META-INF/*.SF</exclude>
+                							<exclude>META-INF/*.DSA</exclude>
+                							<exclude>META-INF/*.RSA</exclude>
+            							</excludes>
+        						</filter>
+    						</filters>
+          					<!-- put your configurations here -->
+          					<finalName>semScape</finalName>
+          				</configuration>
+          			</execution>
+        		</executions>
+      		</plugin>	 
 		</plugins>
 	</build>
-	<dependencies>
-	<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>swing-application-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-	</dependencies>
-	<repositories>
-		<repository>
-			<id>cytoscape_snapshots</id>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<name>Cytoscape Snapshots</name>
-			<url>http://code.cytoscape.org/nexus/content/repositories/snapshots/</url>
-		</repository>
-		<repository>
-			<id>cytoscape_releases</id>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<name>Cytoscape Releases</name>
-			<url>http://code.cytoscape.org/nexus/content/repositories/releases/</url>
-		</repository>
-	</repositories>	
+
+
 </project>
