@@ -168,6 +168,19 @@
 			<url>http://code.cytoscape.org/nexus/content/repositories/snapshots/</url>
 		</repository>
 		<repository>
+			<id>cytoscape_more</id>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<name>Cytoscape More</name>
+			<url>http://code.cytoscape.org/nexus/content/groups/public//</url>
+		</repository>
+		
+		
+		<repository>
 			<id>cytoscape_releases</id>
 			<snapshots>
 				<enabled>false</enabled>
