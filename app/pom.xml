@@ -27,9 +27,11 @@
 					<instructions>
 						<Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<Export-Package>${bundle.namespace}.*</Export-Package>
-						<Private-Package>${bundle.namespace}.internal.*</Private-Package>
+						<!--  Export-Package>${bundle.namespace}.*</Export-Package -->
+						<!--  Private-Package>${bundle.namespace}.internal.*</Private-Package -->
 						<Bundle-Activator>${bundle.namespace}.internal.CyActivator</Bundle-Activator>
+						<Export-Package>!*</Export-Package>
+						<Import-Package>*;resolution:=optional,javax.management</Import-Package>
 					</instructions>
 				</configuration>
 			</plugin>
