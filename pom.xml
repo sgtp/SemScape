@@ -4,10 +4,13 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.cytoscape</groupId>
-	<artifactId>vsdl3c-parent</artifactId>
+	<artifactId>SemScape-parent</artifactId>
 	<version>1.0.5</version>
-	<name>Visualizing Semantic Data Landscapes with Cytoscape 3.0 Parent POM</name>
-	
+	<name>Visualizing Semantic Data Landscapes 3.0 Parent POM</name>
+	<description>
+		SemScape enables visualizing the output of SPARQL queries in Cytoscape 3.0. Its main purpose is to create Semantic Data Landscapes based on different SPARQL endpoints by extracting 
+ 		the underlying data schemas. 
+        </description>
 	<packaging>pom</packaging>
 	
 	<properties>
