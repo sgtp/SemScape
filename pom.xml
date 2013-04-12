@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.cytoscape</groupId>
-	<artifactId>SemScape-parent</artifactId>
+	<artifactId>vsdl3c-parent</artifactId>
 	<version>1.0.5</version>
 	<name>Visualizing Semantic Data Landscapes 3.0 Parent POM</name>
 	<description>
@@ -12,30 +11,10 @@
  		the underlying data schemas. 
         </description>
         <url>http://code.google.com/p/vsdlc3/</url>
-	<packaging>bundle</packaging>
+	<packaging>pom</packaging>
 	
-  <build>
-      <plugins>
-          <plugin>
-              <groupId>org.apache.felix</groupId>
-              <artifactId>maven-bundle-plugin</artifactId>
-              <version>1.4.0</version>
-              <extensions>true</extensions>
-              <configuration>
-                  <instructions>
-                      <Bundle-SymbolicName>${pom.groupId}.${pom.artifactId}</Bundle-SymbolicName>
-                      <Bundle-Name>${pom.name}</Bundle-Name>
-                      <Bundle-Version>${pom.version}</Bundle-Version>
-                      <Bundle-Activator>org.wso2.mbp.sample01.Activator</Bundle-Activator>
-                      <Private-Package>org.wso2.mbp.sample01</Private-Package>
-                  </instructions>
-              </configuration>
-          </plugin>
-      </plugins>
-  </build>
-
 	<properties>
-		<bundle.symbolicName>vsdl3c</bundle.symbolicName>
+		<bundle.symbolicName>vsdlc3</bundle.symbolicName>
 		<bundle.namespace>org.cytoscape.vsdl3c</bundle.namespace>
 		<cytoscape.api.version>3.0.0</cytoscape.api.version>
 		<cytoscape.impl.version>3.0.0</cytoscape.impl.version>
