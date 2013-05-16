@@ -15,7 +15,7 @@
 	<groupId>org.cytoscape</groupId>
 	<artifactId>vsdl3c-app</artifactId>
 	<packaging>bundle</packaging>
-	<name>Visualizing Semantic Data Landscapes with Cytoscape 3.0 App (${project.artifactId})</name>
+	<name>SemScape: Visualizing Semantic Data Landscapes App (${project.artifactId})</name>
 	<build>
 		<plugins>
 			<plugin>
